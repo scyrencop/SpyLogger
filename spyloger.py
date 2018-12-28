@@ -9,7 +9,8 @@ import os
 import time
 import threading
 import pyscreenshot as ImageGrab
-from clip_linux import getClipboardData
+
+from Clipboard.linux import getClipboardData
 
 from Pyxhook import pyxhook
 
