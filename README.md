@@ -16,7 +16,6 @@ DO NOT use this script on other systems without their permission. Only use it on
 [] Compress & Send Images to Email
 [] Runs in background
 
-
 ## Requires
 - Python 2.7
 ### For Linux 
@@ -25,7 +24,7 @@ DO NOT use this script on other systems without their permission. Only use it on
 ### For Windows 
 - pyHook
 ### For Mac OS
-- pyxhook
+- pyObjC
 
 ## Instalation & Usage
 
@@ -39,9 +38,11 @@ You might want to change to an exe by using something like py2exe or PyInstaller
 
 ### Linux
 
-SpyLogger requires python-xlib. install it if you don't have it already
+SpyLogger requires python-xlib and gtk-module. install it if you don't have it already
 
-`sudo apt-get install python-xlib`
+- `sudo apt-get install python-xlib`
+
+- `sudo apt install libcanberra-gtk-module libcanberra-gtk3-module`
 
 Enjoy Using it !
 
@@ -49,6 +50,5 @@ Enjoy Using it !
 ### MAC OSX
 
 - Disabling System Integrity Protection (SIP) by terminal : `csrutil disable` then `reboot` and press enter.
-
 
 **Important:** *For your own security, remember to re-enable this feature after you’re done testing by following the steps above but entering `csrutil enable` .*
