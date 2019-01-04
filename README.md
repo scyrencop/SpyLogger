@@ -14,7 +14,13 @@ DO NOT use this script on other systems without their permission. Only use it on
 [x] Saving ScreenShot Locally
 [x] Sending logs to Email
 [] Compress & Send Images to Email
-[] Runs in background
+[] Upload logs file to an FTP account
+[] Send the logs to a Google Form
+[] JSON storing
+[] Take snapshots from WebCamera
+[] Decode logs into human-readable format
+[] Invisible mode (Runs in background)
+
 
 ## Requires
 - Python 2.7
