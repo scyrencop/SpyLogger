@@ -5,22 +5,20 @@ SpyLogger is a multiplatform Script made in Python, to spy and log every keypres
 DO NOT use this script on other systems without their permission. Only use it on your own system and for educational purposes.
 
 ## Features
-
-[x] Keylogging on Linux
-[] Keylogging on OSX
-[] Keylogging on Windows
-[x] Saving logs to files locally
-[x] Store Clipboard logs Locally
-[x] Saving ScreenShot Locally
-[x] Sending logs to Email
-[] Compress & Send Images to Email
-[] Upload logs file to an FTP account
-[] Send the logs to a Google Form
-[] JSON storing
-[] Take snapshots from WebCamera
-[] Decode logs into human-readable format
-[] Invisible mode (Runs in background)
-
+- [x] Keylogging on Linux
+- [ ] Keylogging on OSX
+- [ ] Keylogging on Windows
+- [x] Saving logs to files locally
+- [x] Store Clipboard logs Locally
+- [x] Saving ScreenShot Locally
+- [x] Sending logs to Email
+- [ ] Compress & Send Images to Email
+- [ ] Upload logs file to an FTP account
+- [ ] Send the logs to a Google Form
+- [ ] JSON storing
+- [ ] Take snapshots from WebCamera
+- [ ] Decode logs into human-readable format
+- [ ] Invisible mode (Runs in background)
 
 ## Requires
 - Python 2.7
