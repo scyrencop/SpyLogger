@@ -1,5 +1,9 @@
 # SpyLogger
 
+<p align="center">
+<img width="200" src="https://i.imgur.com/uOdaQrX.png">
+</p>
+
 SpyLogger is a multiplatform Script made in Python, to spy and log every keypress, screenshot, web cam capture and clipboard ! 
 
 DO NOT use this script on other systems without their permission. Only use it on your own system and for educational purposes.
@@ -39,6 +43,7 @@ Make sure you have Python 2.x installed
 ### Windows 
 
 You might want to change to an exe by using something like py2exe or PyInstaller. Then just run it. To stop it press Ctrl-E or end the Python process in Task Manager
+
 
 ### Linux
 
