@@ -29,9 +29,14 @@ DO NOT use this script on other systems without their permission. Only use it on
 ### For Linux 
 - python-xlib
 - pyxhook
-### For Windows 
+
+
+### For Windows 
+
 - pyHook
+
 ### For Mac OS
+
 - pyObjC
 
 ## Instalation & Usage
@@ -45,7 +50,8 @@ Make sure you have Python 2.x installed
 You might want to change to an exe by using something like py2exe or PyInstaller. Then just run it. To stop it press Ctrl-E or end the Python process in Task Manager
 
 
-### Linux
+### Linux
+
 
 SpyLogger requires python-xlib and gtk-module. install it if you don't have it already
 
